@@ -13,7 +13,7 @@ img_file = st.camera_input("Capturar muestra de agua") or st.file_uploader("O su
 
 if img_file is not None:
     image = Image.open(img_file)
-    st.image(image, caption="Muestra analizada", use_column_width=True)
+    st.image(image, caption="Muestra analizada", use_container_width=True)
     
     img_array = np.array(image)
     h, w, _ = img_array.shape
